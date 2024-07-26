@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 public class ShippingPage extends BasePage {
-    @FindBy(id = "BillingNewAddress_FirstName")
+    @FindBy(id = "BillingNewAddress_FirstName")//BillingNewAddress_FirstName
     WebElement firstname;
 
     @FindBy(id = "BillingNewAddress_LastName")
@@ -55,11 +55,10 @@ public class ShippingPage extends BasePage {
 
     public void billingAddress() {
         try {
-            if(editBtn.isDisplayed())
-            {
+
                 System.out.println("enter edit btn");
                 deleteBtn.click();
-            }
+
         }catch (NoSuchElementException e)
         {
             System.err.println(e);

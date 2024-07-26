@@ -1,4 +1,4 @@
-package com.automation ;
+package com.automation.listeners;
 
 import io.qameta.allure.testng.AllureTestNg;
 
