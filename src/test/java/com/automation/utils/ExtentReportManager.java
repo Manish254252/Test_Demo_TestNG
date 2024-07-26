@@ -38,8 +38,11 @@ public class ExtentReportManager {
     public static ExtentTest getTest() {
         return test;
     }
-
-    public static void takeScreenshot() {
+public static void attachScreenShot()
+{
+    test.addScreenCaptureFromPath(takeScreenshot());
+}
+    public static String takeScreenshot() {
 
         System.out.println("Entre Screenshot");
         TakesScreenshot ts = (TakesScreenshot) DriverManager.getDriver();
@@ -52,7 +55,7 @@ public class ExtentReportManager {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.getProperty("user.dir");
+       return System.getProperty("user.dir")+"/"+filePath;
     }
 
 }

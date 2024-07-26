@@ -27,10 +27,12 @@ public class ExtentReportListener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
         ExtentReportManager.getTest().pass("Test passed");
+        ExtentReportManager.attachScreenShot();
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
+        ExtentReportManager.attachScreenShot();
         ExtentReportManager.getTest().fail("Test failed \n"+result.getThrowable().getMessage());
 
     }
