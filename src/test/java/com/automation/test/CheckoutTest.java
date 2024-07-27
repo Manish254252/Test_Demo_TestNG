@@ -1,5 +1,6 @@
 package com.automation.test;
 
+import com.automation.utils.AllureReportManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,8 +9,10 @@ public class CheckoutTest extends BaseTest{
     void checkOut()
     {
         registerPage.register();
+        AllureReportManager.attachScreenShot();
         loginPage.doLogin();
         checkoutPage.clickOnComputersLink();
+        AllureReportManager.attachScreenShot();
         checkoutPage.clickOnNoteBookOpt();
         checkoutPage.addToCartProduct();
         checkoutPage.clickOnAddToCartLogo();

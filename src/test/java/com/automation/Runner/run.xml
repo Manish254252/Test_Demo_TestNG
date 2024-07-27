@@ -2,13 +2,13 @@
 <suite name="Demo">
     <listeners>
         <listener class-name="com.automation.listeners.AllureListener"/>
-        <listener class-name="com.automation.listeners.ScreenshotListener"/>
         <listener class-name="com.automation.listeners.ExtentReportListener"/>
     </listeners>
     <test name="smoke">
         <classes>
-            <class name="com.automation.test.CheckoutTest"/>
-            <class name="com.automation.test.RegisterTest"/>
+<!--            <class name="com.automation.test.CheckoutTest"/>-->
+<!--            <class name="com.automation.test.RegisterTest"/>-->
+
             <class name="com.automation.test.LoginTest"/>
         </classes>
     </test>

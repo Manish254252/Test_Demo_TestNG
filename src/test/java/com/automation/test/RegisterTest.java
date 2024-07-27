@@ -1,6 +1,7 @@
 package com.automation.test;
 
 import com.automation.pages.RegisterPage;
+import com.automation.utils.AllureReportManager;
 import com.automation.utils.ConfigReader;
 import org.testng.annotations.Test;
 
@@ -10,7 +11,9 @@ public class RegisterTest extends BaseTest {
     void register()
     {
         registerPage.openWebsite();
+        AllureReportManager.attachScreenShot();
         registerPage.selectMaleGender();
+        AllureReportManager.attachScreenShot();
         registerPage.enterFirstName(ConfigReader.getConfigValue("firstname"));
         registerPage.enterLastName(ConfigReader.getConfigValue("lastname"));
         registerPage.selectDOB(ConfigReader.getConfigValue("DOB"));
